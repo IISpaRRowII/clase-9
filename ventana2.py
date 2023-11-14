@@ -143,7 +143,7 @@ class Ventana2(QMainWindow):
                     #se crea boton para cada usuario mostrando su cedula
                     self.botonAccion = QPushButton(self.usuarios[self.contador].documento)
                     self.botonAccion.setFixedWidth(150)
-                    self.botonAccion.setStyleSheet("background-color:blue;"
+                    self.botonAccion.setStyleSheet("background-color: #40AEFA;"
                                                    "color: white;"
                                                    "padding: 10px;")
                     #---metemos el boton en el layout vertical para que se muestre
@@ -167,6 +167,20 @@ class Ventana2(QMainWindow):
         #establecemos el metodo para qe funcionen todos los botones
         self.botones.idClicked.connect(self.metodo_accionBotones)
 
+        #-----BOTON VOLVER-----
+        #--se hace boton para volver a la ventana anterior
+        self.botonVolver = QPushButton("Volver")
+        self.botonVolver.setFixedWidth(90)
+        self.botonVolver.setStyleSheet("background-color: blue;"
+                                       "color: white;"
+                                       "padding: 10px;"
+                                       "margin-top: 40px")
+
+        self.botonVolver.clicked.connect(self.metodo_botonVolver)
+
+        self.vertical.addWidget(self.botonVolver)
+
+
         # ---SE COLOCA AL FINAL---
         self.fondo.setLayout(self.vertical)
 
@@ -174,8 +188,9 @@ class Ventana2(QMainWindow):
     def metodo_accionBotones(self, cedulaUsuario):
         print(cedulaUsuario)
 
-
-
+    def metodo_botonVolver(self):
+        self.hide()
+        self.ventanaAnterior.show()
 
 
 
