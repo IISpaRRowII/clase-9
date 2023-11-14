@@ -6,6 +6,7 @@ from PyQt5.QtGui import QPixmap, QFont
 from PyQt5.QtWidgets import QMainWindow, QDesktopWidget, QLabel, QHBoxLayout, QApplication, QPushButton, QLineEdit, \
     QFormLayout, QDialog, QDialogButtonBox, QVBoxLayout
 from Cliente import ClienteD
+from ventana2 import Ventana2
 
 class Ventana1(QMainWindow):
     def __init__(self, parent=None):
@@ -225,12 +226,26 @@ class Ventana1(QMainWindow):
 
         self.ladoDerecho.addRow(self.botonBuscar, self.botonRecuperar)
 
+        self.botonContinuar = QPushButton("Continuar")
+
+        self.botonContinuar.setFixedWidth(90)
+
+        self.botonContinuar.setStyleSheet("background-color: blue;"
+                                          "color: white;"
+                                          "padding: 10px;"
+                                          "margin-top: 40px;")
+
+        self.botonContinuar.clicked.connect(self.accion_botonContinuar)
+
+        self.ladoDerecho.addRow(self.botonContinuar)
+
+        #se agrega el layout derecho al layout horizontal
         self.horizontal.addLayout(self.ladoDerecho)
 
-        #-----CODIGO PARA LA VENTANA DE DIALOGO-----
-
+        #---SE COLOCA AL FINAL SIEMPRE---
         self.fondo.setLayout(self.horizontal)
 
+        # -----CODIGO PARA LA VENTANA DE DIALOGO-----
         self.ventanaDialogo = QDialog(None, QtCore.Qt.WindowSystemMenuHint | QtCore.Qt.WindowTitleHint)
 
         self.ventanaDialogo.resize(400, 200)
@@ -516,6 +531,11 @@ class Ventana1(QMainWindow):
 
 
                 self.ventanaDialogo.exec_()
+
+    def accion_botonContinuar(self):
+        self.hide()
+        self.ventana2 = Ventana2(self)
+        self.ventana2.show()
 
 
 
