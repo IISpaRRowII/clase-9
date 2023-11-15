@@ -69,7 +69,7 @@ class Ventana3(QMainWindow):
             # ---metemos el objeto en la lista de usuario
             self.usuarios.append(u)
 
-            # ---Cerramos el archivo
+        # ---Cerramos el archivo
         self.file.close()
 
         # ---Se tiene la lista con todos los usuarios

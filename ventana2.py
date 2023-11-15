@@ -8,6 +8,7 @@ from PyQt5.QtWidgets import QMainWindow, QDesktopWidget, QLabel, QVBoxLayout, QA
 
 from Cliente import ClienteD
 from ventana3 import Ventana3
+from ventana4 import Ventana4
 
 
 class Ventana2(QMainWindow):
@@ -199,7 +200,10 @@ class Ventana2(QMainWindow):
 
     #---metodo para controlar las acciones de los botones
     def metodo_accionBotones(self, cedulaUsuario):
-        print(cedulaUsuario)
+        #print(cedulaUsuario)
+        self.hide()
+        self.ventana4 = Ventana4(self, cedulaUsuario)
+        self.ventana4.show()
 
     def metodo_botonVolver(self):
         self.hide()
