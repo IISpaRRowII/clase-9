@@ -1,2 +1,1 @@
-pepito;pepeneitor;pepito123;24436969;pepito1@gmail.com;en que ciudad nacio;boyaca;en que año nacio;2008;como se llama su abuelo;fabio
-Juan Felipe Vargas ;juanvar;pekerman;1010152043;juanvarg@gmail.com;donde nació;manizales;en que año nació;2001;como se llama su hermano;alejandro
+pepito;pepeneitor3;pepito;24436969;pepito@gmail.com;donde naciste;medellin ;en que año naciste;2008;como se llama tu abuelo ;fabio jesus
