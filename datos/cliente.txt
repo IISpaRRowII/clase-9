@@ -1,1 +1,3 @@
-pepito;pepeneitor;pepe123;24436969;pepito@gmail.com;donde nacio ;boyaca;en que año nacio;2008;como se llama su abuelo;fabio
+pepito;pepeneitor2;pepe123;24436969;pepito@gmail.com;donde nacio ;boyaca;en que año nacio;2008;como se llama su abuelo;fabio
+juan;juaniquilador;juan123;1010152043;juan@gmail.com;donde vive ;medellin;cuantos años tiene;36;donce nacio;manizales 
+a;a;a;3;a;a;a;a;a;a;a
